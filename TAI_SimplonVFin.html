@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Studio aux Systèmes - Ma Candidature Simplon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin: 40px 0;
+            position: relative;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 55%;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 55%;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border: 4px solid white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        .phase-title {
+            color: #667eea;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section {
+            background: rgba(255,255,255,0.95);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before { left: 30px; }
+            .timeline-content { width: calc(100% - 60px); margin-left: 60px !important; margin-right: 0 !important; }
+            .timeline-marker { left: 30px; }
+            .hero h1 { font-size: 2.5em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🎵 → 🔒</h1>
+            <h2 class="subtitle">Du Studio de La Seine aux Systèmes & Réseaux</h2>
+            <p><strong>Ma candidature pour le cursus TAI/TSSR chez Simplon Bayonne</strong></p>
+        </div>
+
+        <div class="highlight">
+            <h3>🎯 Pourquoi cette reconversion ?</h3>
+            <p><strong>L'informatique, c'est mon ADN depuis l'enfance.</strong> Fils d'un expert cybersécurité, j'ai grandi entre Linux et Windows. La musique m'a fait découvrir ma passion pour la création, mais aujourd'hui, je veux retrouver mes racines tech tout en construisant un équilibre de vie durable.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">🔧 Les Fondations (Enfance - Collège)</div>
+                    <p><strong>Baigné dans la tech dès le plus jeune âge</strong> grâce à mon père, expert en cybersécurité. Linux, Windows, bidouillage permanent... L'informatique, c'était naturel !</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">🎵 L'Éveil Créatif (Fin Collège - Lycée)</div>
+                    <p><strong>Découverte de la MAO :</strong> le perfect match entre ma passion tech et la musique. Bac S Sciences de l'Ingénieur, apprentissage autodidacte intensif des logiciels audio.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">🎓 La Formation (École Privée)</div>
+                    <p><strong>Technicien son/Sound Designer RNCP niveau 6.</strong> Surprise : top 3 sur 150 élèves ! Ma méthode autodidacte et ma passion tech m'avaient donné une longueur d'avance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">🚀 L'Ascension (Studios de La Seine)</div>
+                    <p><strong>Du "stagiaire-ménage" à l'assistant privilégié.</strong> Détermination, passion, dévotion totale. Rencontre avec de nombreaux acteurs du milieu, première collaboration, puis embauche dans l'équipe des Studios !</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">💎 Le Succès (Compositeur Pro)</div>
+                    <p><strong>Titre certifié Diamant, collaborations avec les plus gros artistes français.</strong> Rythme intense (70-80h/semaine), apprentissage constant, adaptation permanente aux nouvelles technologies audio.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="phase-title">🔄 La Transition (Pays Basque)</div>
+                    <p><strong>Nouveau chapitre de vie :</strong> mariage, équilibre work-life, besoin de stabilité. Retour naturel vers mes premières amours : <em>l'informatique et la cybersécurité</em>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🧠</div>
+                <h3>Autodidacte Expert</h3>
+                <p>Capacité prouvée d'apprendre rapidement et de maîtriser des outils complexes. En musique comme en tech, je creuse jusqu'à comprendre chaque détail.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🔧</div>
+                <h3>Résolveur de Problèmes</h3>
+                <p>10 ans à débugger des sessions audio, optimiser des workflows, collaborer sous pression. La résolution technique, c'est mon quotidien !</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">💪</div>
+                <h3>Résilience & Détermination</h3>
+                <p>Du "stagiaire-ménage" au succès, en passant par les épreuves. Je sais que les vraies victoires demandent du temps et de la persévérance.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🌊</div>
+                <h3>Adaptabilité Technologique</h3>
+                <p>L'industrie musicale change constamment. Nouveaux logiciels, nouveaux formats, nouvelles méthodes... Je surfe sur l'innovation depuis 10 ans !</p>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <h3>🎯 Pourquoi TAI → TSSR → ASR ?</h3>
+            <p><strong>J'ai une vision claire de ma progression.</strong> Pas de précipitation cette fois : je veux construire des bases solides en TAI, puis évoluer vers TSSR en alternance pour allier théorie et pratique. L'objectif final ? Devenir Administrateur Systèmes et Réseaux, avec l'expertise cybersécurité héritée de mon père.</p>
+            
+            <p><strong>Mon avantage unique ?</strong> Je connais la valeur du travail intensif, j'ai l'habitude des environnements high-tech exigeants, et surtout : <em>j'ai toujours su que l'informatique était ma destinée</em>.</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>🚀 Prêt pour cette nouvelle aventure</h2>
+            <p><strong>10 ans d'expérience tech-créative + Passion native pour l'informatique + Détermination prouvée = Votre futur expert systèmes & réseaux</strong></p>
+            
+            <p style="margin-top: 20px;">Je m'auto-forme déjà, je me documente quotidiennement, et je suis prêt à donner le meilleur de moi-même dans cette formation.</p>
+            
+            <p style="font-style: italic; margin-top: 20px;">"Comme dans la musique, en informatique, ce sont les détails techniques qui font toute la différence entre un amateur et un professionnel."</p>
+        </div>
+    </div>
+
+    <script>
+        // Animation au scroll
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Animation des cartes au hover
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                this.style.color = 'white';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+                this.style.color = '#333';
+            });
+        });
+    </script>
+</body>
+</html>
